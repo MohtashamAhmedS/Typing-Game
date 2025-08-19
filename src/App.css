@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .App {
@@ -15,7 +15,7 @@
   height: 100vh;
   overflow: hidden;
   color: #eee;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .background-video {
@@ -88,15 +88,16 @@
 /* playing */
 .playing {
   height: 100vh;
-  display: grid;
-  grid-template-rows: 70% 1fr;
+  display: flex;
+  /* grid-template-rows: 70% 1fr; */
+  flex-direction: column;
   padding: 50px;
   text-align: center;
+  justify-content: center;
   gap: 10px;
   opacity: 0;
   animation: showHome 1s ease-in-out 1 forwards;
 }
-
 .playing .list {
   padding: 50px;
   list-style: none;
@@ -151,13 +152,13 @@
 .playing .list li.true::after {
   position: absolute;
   inset: 0 0 0 0;
-  content: "+1";
+  content: '+1';
   text-align: center;
   animation: showPoint 0.5s linear 1 forwards;
 }
 
 .playing .list li.false::after {
-  content: "-1";
+  content: '-1';
 }
 
 @keyframes showPoint {
